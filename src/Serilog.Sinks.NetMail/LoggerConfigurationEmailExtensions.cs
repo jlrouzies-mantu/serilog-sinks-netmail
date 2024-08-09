@@ -49,6 +49,7 @@ public static class LoggerConfigurationEmailExtensions
     /// <param name="enableSSL">Enables SSL. Default is False.</param>
     /// <param name="isBodyHtml">Enable Body as HTML. Default is False.</param>
     /// <param name="useDefaultCredentials">Use the default credentials. Default is False.</param>
+    /// <param name="ignoreCertificateError">Ignore certificate error from the host. Default is False.</param>
     /// <param name="restrictedToMinimumLevel">The minimum level for
     /// events passed through the sink. Ignored when <paramref name="levelSwitch"/> is specified.</param>
     /// <param name="levelSwitch">A switch allowing the pass-through minimum level
@@ -68,6 +69,7 @@ public static class LoggerConfigurationEmailExtensions
         string? body = null,
         bool enableSSL = false,
         bool isBodyHtml = false,
+        bool ignoreCertificateError = false,
         IFormatProvider? formatProvider = null,
         LogEventLevel restrictedToMinimumLevel = LevelAlias.Minimum,
         LoggingLevelSwitch? levelSwitch = null,
@@ -87,7 +89,8 @@ public static class LoggerConfigurationEmailExtensions
             EnableSSL = enableSSL,
             Credentials = credentials,
             IsBodyHtml = isBodyHtml,
-            UseDefaultCredentials = useDefaultCredentials
+            UseDefaultCredentials = useDefaultCredentials,
+            IgnoreCertificateError = ignoreCertificateError,
         };
 
         if (subject != null)

@@ -27,6 +27,12 @@ class NetSmtpTransport(EmailSinkOptions options) : IEmailTransport
     {
         using (SmtpClient client = new SmtpClient(options.Host))
         {
+            if (options.IgnoreCertificateError)
+            {
+                ServicePointManager.ServerCertificateValidationCallback =
+                    (sender, certificate, chain, sslPolicyErrors) => true;
+            }
+
             client.Port = options.Port; // or 25 or any other port your server uses
             client.EnableSsl = options.EnableSSL; // Set to true if your server requires SSL            
             client.DeliveryMethod = SmtpDeliveryMethod.Network;

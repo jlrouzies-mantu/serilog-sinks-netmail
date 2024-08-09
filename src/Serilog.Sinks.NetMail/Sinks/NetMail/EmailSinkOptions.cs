@@ -71,6 +71,11 @@ public sealed class EmailSinkOptions
     public bool UseDefaultCredentials { get; set; }
 
     /// <summary>
+    /// Ignore certificate errors. Default is False.
+    /// </summary>
+    public bool IgnoreCertificateError { get; set; }
+
+    /// <summary>
     /// Enable SSL.
     /// </summary>
     public bool EnableSSL { get; set; }
