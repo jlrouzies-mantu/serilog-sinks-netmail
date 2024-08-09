@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Serilog.Sinks.Email\Serilog.Sinks.NetMail.csproj" />
+    <ProjectReference Include="..\..\src\Serilog.Sinks.NetMail\Serilog.Sinks.NetMail.csproj" />
   </ItemGroup>
 
   <ItemGroup>
