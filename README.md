@@ -26,6 +26,7 @@ Supported options are:
 | `useDefaultCredentials`| Use the Default Credentials, useful e.g. for NTML / Kerberos                                                                        |
 | `subject`              | A message template describing the email subject. The default is `"Log Messages"`.                                                   |
 | `body`                 | A message template describing the format of the email body. The default is `"{Timestamp} [{Level}] {Message}{NewLine}{Exception}"`. |
+| `bodyIsHtml`       | Enables HTML support for body. Note unlike Email sink, there is no need for further custom code / method. It is native of System.Net.Mail. |
 | `formatProvider`       | Supplies culture-specific formatting information. The default is to use the current culture.                                        |
 
 An overload accepting `EmailSinkOptions` can be used to specify advanced options such as batched and/or HTML body templates.
