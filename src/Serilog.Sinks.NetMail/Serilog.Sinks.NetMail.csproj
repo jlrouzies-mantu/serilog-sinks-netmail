@@ -1,8 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>Send Serilog events as SMTP email using System.Net.Mail.</Description>
-    <VersionPrefix>4.0.1</VersionPrefix>
+    <VersionPrefix>1.0.0</VersionPrefix>
     <Authors>Serilog Contributors</Authors>
+    <owners>Jean-Laurent ROUZIES</owners>
+    <ReleaseNotes>.</ReleaseNotes>
+    <ProjectUrl>https://github.com/jlrouzies-mantu/serilog-sinks-netmail</ProjectUrl>
+    <LicenseUrl>https://www.apache.org/licenses/LICENSE-2.0</LicenseUrl>
+    <RequireLicenseAcceptance>true</RequireLicenseAcceptance>
     <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT'">net462;net471</TargetFrameworks>
     <TargetFrameworks>$(TargetFrameworks);netstandard2.0;net6.0;net8.0</TargetFrameworks>
     <AssemblyOriginatorKeyFile>../../assets/Serilog.snk</AssemblyOriginatorKeyFile>
@@ -10,8 +15,7 @@
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageTags>serilog;smtp;netmail</PackageTags>
-    <PackageIcon>serilog-sink-nuget.png</PackageIcon>
-    <PackageProjectUrl>https://serilog.net/</PackageProjectUrl>
+    <PackageIcon>serilog-sink-nuget.png</PackageIcon>    
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <TreatSpecificWarningsAsErrors />
     <PolySharpIncludeRuntimeSupportedAttributes>true</PolySharpIncludeRuntimeSupportedAttributes>
